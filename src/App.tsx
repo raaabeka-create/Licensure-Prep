@@ -1,4 +1,5 @@
 import { BookOpen, Brain, Clock3, WifiOff } from 'lucide-react';
+import AuthPanel from './features/auth/AuthPanel';
 
 const subjects = [
   'Fundamentals of Nursing',
@@ -36,7 +37,7 @@ export default function App() {
       <section className="subjects-section">
         <div className="section-heading">
           <div><div className="eyebrow">QUESTION BANK</div><h2>Choose a study area</h2></div>
-          <span className="coming-soon">Content loading in stages</span>
+          <span className="coming-soon">Question content in preparation</span>
         </div>
         <div className="subject-grid">
           {subjects.map((subject, index) => (
@@ -48,6 +49,7 @@ export default function App() {
           ))}
         </div>
       </section>
+      <AuthPanel />
       <footer>NURSEPREP <span>·</span> Independent nursing education practice platform</footer>
     </main>
   );
