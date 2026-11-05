@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { AnswerOption, LocalQuizAttempt, NursingQuestion, QuizMode } from '../../types/question';
 import { getAttemptHistory } from '../../lib/localDb';
+import { syncPendingAttempts } from '../../lib/sync';
 import {
   getQuestionFeedback,
   selectAnswer,
@@ -51,6 +52,7 @@ export default function QuizWorkspace() {
     try {
       const completed = await submitQuiz(attempt.id);
       setAttempt(completed);
+      void syncPendingAttempts();
       setNotice('Quiz submitted. Your result is saved on this device.');
       const history = await getAttemptHistory();
       setHistoryCount(history.length);
