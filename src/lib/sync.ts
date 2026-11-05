@@ -1,4 +1,3 @@
-import type { LocalQuizAttempt } from '../types/question';
 import { localDb } from './localDb';
 import { supabase } from './supabase';
 
@@ -12,6 +11,13 @@ export async function syncPendingAttempts(): Promise<{ synced: number; skipped: 
   let synced = 0;
 
   for (const attempt of pending) {
+    // Never upload an answer record unless the local attempt contains its
+    // actual correct answer. Do not guess or substitute an answer key.
+    const hasCompleteKey = attempt.questionIds.every(
+      (questionId) => ['A', 'B', 'C', 'D'].includes(attempt.correctAnswers[questionId]),
+    );
+    if (!hasCompleteKey || !attempt.completedAt) continue;
+
     const { error: attemptError } = await supabase.from('quiz_attempts').upsert({
       id: attempt.id,
       user_id: user.id,
@@ -21,23 +27,25 @@ export async function syncPendingAttempts(): Promise<{ synced: number; skipped: 
       correct_count: attempt.correctCount ?? 0,
       score_percent: attempt.scorePercent ?? 0,
       started_at: attempt.startedAt,
-      completed_at: attempt.completedAt ?? null,
+      completed_at: attempt.completedAt,
       duration_seconds: attempt.durationSeconds,
     });
 
     if (attemptError) continue;
 
-    const answers = attempt.questionIds.map((questionId) => ({
-      attempt_id: attempt.id,
-      question_id: questionId,
-      selected_option: attempt.answers[questionId] ?? null,
-      // The correct option is intentionally not inferred here. The caller must
-      // enrich this record from the local question bank before answer sync.
-      correct_option: 'A',
-      is_correct: false,
-      time_spent_seconds: 0,
-      was_flagged: attempt.flaggedQuestionIds.includes(questionId),
-    }));
+    const answers = attempt.questionIds.map((questionId) => {
+      const selected = attempt.answers[questionId] ?? null;
+      const correct = attempt.correctAnswers[questionId];
+      return {
+        attempt_id: attempt.id,
+        question_id: questionId,
+        selected_option: selected,
+        correct_option: correct,
+        is_correct: selected === correct,
+        time_spent_seconds: 0,
+        was_flagged: attempt.flaggedQuestionIds.includes(questionId),
+      };
+    });
 
     const { error: answerError } = await supabase
       .from('quiz_attempt_answers')
@@ -49,8 +57,4 @@ export async function syncPendingAttempts(): Promise<{ synced: number; skipped: 
   }
 
   return { synced, skipped: false };
-}
-
-export function isLocalAttempt(value: unknown): value is LocalQuizAttempt {
-  return typeof value === 'object' && value !== null && 'questionIds' in value;
 }
