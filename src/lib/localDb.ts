@@ -24,6 +24,7 @@ export async function saveQuestionBank(
   questions: NursingQuestion[],
   bankVersion = 1,
 ): Promise<void> {
+  if (questions.length === 0) return;
   await localDb.transaction('rw', localDb.questions, async () => {
     await localDb.questions.bulkPut(
       questions.map((question) => ({ ...question, bankVersion })),
