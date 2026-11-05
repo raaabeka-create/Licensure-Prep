@@ -46,6 +46,7 @@ export interface LocalQuizAttempt {
   startedAt: string;
   completedAt?: string;
   durationSeconds: number;
+  timeLimitSeconds?: number;
   correctCount?: number;
   scorePercent?: number;
   syncStatus: 'pending' | 'synced';
