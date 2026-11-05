@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { BookOpen, Brain, Clock3, WifiOff } from 'lucide-react';
+import { installBundledQuestionBanks } from './lib/questionBank';
 import AuthPanel from './features/auth/AuthPanel';
 
 const subjects = [
@@ -15,6 +17,14 @@ const subjects = [
 ];
 
 export default function App() {
+  const [bankStatus, setBankStatus] = useState('Preparing offline question banks...');
+
+  useEffect(() => {
+    installBundledQuestionBanks()
+      .then(({ subjects: count, questions }) => setBankStatus(`${count} subjects ready · ${questions} questions installed`))
+      .catch((error: unknown) => setBankStatus(error instanceof Error ? error.message : 'Could not load local question banks.'));
+  }, []);
+
   return (
     <main className="app-shell">
       <header className="topbar">
@@ -37,7 +47,7 @@ export default function App() {
       <section className="subjects-section">
         <div className="section-heading">
           <div><div className="eyebrow">QUESTION BANK</div><h2>Choose a study area</h2></div>
-          <span className="coming-soon">Question content in preparation</span>
+          <span className="coming-soon">{bankStatus}</span>
         </div>
         <div className="subject-grid">
           {subjects.map((subject, index) => (
