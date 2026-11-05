@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { BookOpen, Brain, Clock3, WifiOff } from 'lucide-react';
 import { installBundledQuestionBanks } from './lib/questionBank';
 import AuthPanel from './features/auth/AuthPanel';
+import QuizWorkspace from './features/quiz/QuizWorkspace';
 
 const subjects = [
   'Fundamentals of Nursing',
@@ -59,6 +60,7 @@ export default function App() {
           ))}
         </div>
       </section>
+      <QuizWorkspace />
       <AuthPanel />
       <footer>NURSEPREP <span>·</span> Independent nursing education practice platform</footer>
     </main>
