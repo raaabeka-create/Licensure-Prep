@@ -58,3 +58,51 @@ footer span { color: var(--cyan); padding: 0 5px; }
 .auth-actions button.secondary { color: #d9eaff; background: #183754; border: 1px solid #7ca9ce44; }
 .auth-actions button:disabled { opacity: .45; cursor: not-allowed; }
 .auth-message { color: var(--cyan) !important; }
+
+
+.quiz-workspace { margin: 0 auto 54px; padding: 25px; border: 1px solid #8ab7dc35; border-radius: 16px; background: linear-gradient(145deg, #0d2742, #091a2e); }
+.quiz-heading, .quiz-toolbar, .quiz-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.quiz-heading { margin-bottom: 22px; }
+.quiz-heading h2 { margin-bottom: 0; }
+.history-count, .quiz-muted { color: var(--muted); font-size: 12px; }
+.quiz-setup { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.quiz-setup label { display: grid; gap: 7px; color: #c5d6e8; font-size: 12px; }
+.quiz-setup select, .quiz-setup input { width: 100%; min-width: 0; padding: 11px; color: #eaf3ff; background: #061326; border: 1px solid #7699b544; border-radius: 8px; }
+.quiz-setup button, .quiz-navigation button, .quiz-workspace > button { align-self: end; padding: 11px 17px; color: #041726; background: var(--cyan); border: 0; border-radius: 8px; font-weight: 750; cursor: pointer; }
+.quiz-setup button { grid-column: 1 / -1; }
+.quiz-workspace button:disabled { opacity: .4; cursor: not-allowed; }
+.quiz-toolbar { color: #c7d9ec; font-size: 12px; }
+.timer { color: var(--cyan); font-weight: 800; font-variant-numeric: tabular-nums; }
+.timer.urgent { color: #ff9b91; }
+.progress-track { height: 5px; margin: 14px 0 24px; overflow: hidden; background: #ffffff16; border-radius: 9px; }
+.progress-track span { display: block; height: 100%; background: var(--cyan); transition: width .2s; }
+.question-topic { color: var(--cyan); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.question-stem { max-width: 850px; margin: 12px 0 20px; font-size: 19px; line-height: 1.5; }
+.answer-list { display: grid; gap: 10px; }
+.answer-option { display: flex; align-items: flex-start; gap: 13px; width: 100%; padding: 14px; text-align: left; color: #dce9f7; background: #06172a; border: 1px solid #8ab7dc30; border-radius: 10px; cursor: pointer; }
+.answer-option strong { display: grid; flex: 0 0 26px; width: 26px; height: 26px; place-items: center; color: var(--cyan); background: #39d7ed18; border-radius: 7px; }
+.answer-option.selected { border-color: var(--cyan); }
+.answer-option.correct { border-color: #45d483; background: #12372b; }
+.answer-option.correct strong { color: #061326; background: #45d483; }
+.answer-option.incorrect { border-color: #ff7777; background: #3b1d2a; }
+.answer-option.incorrect strong { color: white; background: #c84d5a; }
+.rationale { margin-top: 16px; padding: 14px; color: #ffe2e2; background: #47242d; border-radius: 9px; font-size: 13px; line-height: 1.55; }
+.rationale p { margin: 6px 0 0; }
+.rationale.correct-rationale { color: #d8ffea; background: #12372b; }
+.quiz-navigation { margin-top: 20px; }
+.quiz-navigation button.secondary, .quiz-toolbar button.secondary { color: #d9eaff; background: #183754; border: 1px solid #7ca9ce44; }
+.question-jump { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.jump-item { width: 31px; height: 31px; color: #b7c9dc; background: #061326; border: 1px solid #ffffff25; border-radius: 7px; cursor: pointer; }
+.jump-item.active { border-color: var(--cyan); color: var(--cyan); }
+.jump-item.answered { background: #12372b; }
+.jump-item.flagged { box-shadow: inset 0 -3px #f2bb56; }
+.quiz-notice { color: var(--cyan); font-size: 12px; line-height: 1.5; }
+.result-score { margin-top: 18px; color: var(--cyan); font-size: 54px; font-weight: 850; letter-spacing: -2px; }
+@media (max-width: 620px) {
+  .quiz-workspace { padding: 17px; }
+  .quiz-setup { grid-template-columns: 1fr; }
+  .quiz-setup button { grid-column: auto; }
+  .quiz-heading { align-items: flex-start; flex-direction: column; }
+  .quiz-toolbar { flex-wrap: wrap; }
+  .question-stem { font-size: 17px; }
+}
