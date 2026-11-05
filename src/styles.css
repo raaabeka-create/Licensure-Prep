@@ -46,3 +46,15 @@ footer span { color: var(--cyan); padding: 0 5px; }
   .subject-grid { grid-template-columns: 1fr; }
   .section-heading { align-items: start; flex-direction: column; }
 }
+
+
+.auth-panel { max-width: 520px; margin: 0 auto 55px; padding: 24px; border: 1px solid #8ab7dc35; border-radius: 16px; background: #0b2038; }
+.auth-panel h2 { margin-top: 0; }
+.auth-panel > p, .auth-note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.auth-panel label { display: block; margin-top: 14px; color: #c5d6e8; font-size: 12px; }
+.auth-panel input { display: block; width: 100%; margin-top: 6px; padding: 11px 12px; color: #eaf3ff; background: #061326; border: 1px solid #7699b533; border-radius: 8px; outline-color: var(--cyan); }
+.auth-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+.auth-actions button { padding: 10px 15px; color: #041726; background: var(--cyan); border: 0; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.auth-actions button.secondary { color: #d9eaff; background: #183754; border: 1px solid #7ca9ce44; }
+.auth-actions button:disabled { opacity: .45; cursor: not-allowed; }
+.auth-message { color: var(--cyan) !important; }
