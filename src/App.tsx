@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BookOpen, Brain, Clock3, WifiOff } from 'lucide-react';
 import { installBundledQuestionBanks } from './lib/questionBank';
+import { startAutoSync } from './lib/sync';
 import AuthPanel from './features/auth/AuthPanel';
 import QuizWorkspace from './features/quiz/QuizWorkspace';
 
@@ -21,9 +22,11 @@ export default function App() {
   const [bankStatus, setBankStatus] = useState('Preparing offline question banks...');
 
   useEffect(() => {
+    const stopSync = startAutoSync();
     installBundledQuestionBanks()
       .then(({ subjects: count, questions }) => setBankStatus(`${count} subjects ready · ${questions} questions installed`))
       .catch((error: unknown) => setBankStatus(error instanceof Error ? error.message : 'Could not load local question banks.'));
+    return stopSync;
   }, []);
 
   return (
