@@ -40,6 +40,7 @@ export async function startQuiz(configuration: QuizConfiguration): Promise<{
     flaggedQuestionIds: [],
     startedAt: now,
     durationSeconds: 0,
+    timeLimitSeconds: configuration.timeLimitMinutes ? configuration.timeLimitMinutes * 60 : undefined,
     syncStatus: 'pending',
   };
 
