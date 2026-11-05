@@ -41,6 +41,7 @@ export interface LocalQuizAttempt {
   mode: QuizMode;
   questionIds: string[];
   answers: Record<string, AnswerOption | null>;
+  correctAnswers: Record<string, AnswerOption>;
   flaggedQuestionIds: string[];
   startedAt: string;
   completedAt?: string;
