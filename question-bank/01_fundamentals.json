@@ -1,0 +1,277 @@
+{
+  "subjectId": "fundamentals_of_nursing",
+  "subjectName": "Fundamentals of Nursing",
+  "version": 1,
+  "questions": [
+    {
+      "id": "FUND-001",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Infection Prevention",
+      "difficulty": "easy",
+      "stem": "A nurse is preparing to perform a sterile dressing change. Which action best protects the sterile field?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep the sterile field above waist level and in view."
+        },
+        {
+          "id": "B",
+          "text": "Turn away briefly while opening sterile supplies."
+        },
+        {
+          "id": "C",
+          "text": "Reach across the sterile field to obtain gauze."
+        },
+        {
+          "id": "D",
+          "text": "Place the sterile field on the bedside chair."
+        }
+      ],
+      "correctAnswer": "A",
+      "rationale": "A sterile field must remain above waist level and continuously visible. Turning away, reaching over it, or placing it on an unsuitable surface risks contamination."
+    },
+    {
+      "id": "FUND-002",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Patient Safety",
+      "difficulty": "easy",
+      "stem": "A patient reports dizziness when standing. Which nursing action is the priority before assisting the patient to walk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ask the patient to walk slowly without assistance."
+        },
+        {
+          "id": "B",
+          "text": "Assess orthostatic symptoms and obtain assistance as indicated."
+        },
+        {
+          "id": "C",
+          "text": "Encourage the patient to hold the IV pole."
+        },
+        {
+          "id": "D",
+          "text": "Document the dizziness after ambulation."
+        }
+      ],
+      "correctAnswer": "B",
+      "rationale": "Dizziness on standing increases fall risk and may indicate orthostatic hypotension. Assess the patient first and use appropriate assistance before ambulation."
+    },
+    {
+      "id": "FUND-003",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Vital Signs",
+      "difficulty": "medium",
+      "stem": "A patient has a blood pressure of 86/54 mm Hg, cool skin, and new confusion. What should the nurse do first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recheck the blood pressure in four hours."
+        },
+        {
+          "id": "B",
+          "text": "Offer oral fluids and leave the patient resting."
+        },
+        {
+          "id": "C",
+          "text": "Initiate an urgent clinical assessment and notify the appropriate response team."
+        },
+        {
+          "id": "D",
+          "text": "Document the findings as expected in an older adult."
+        }
+      ],
+      "correctAnswer": "C",
+      "rationale": "Hypotension with cool skin and acute confusion may indicate impaired perfusion or shock. This requires immediate assessment and escalation, not delayed observation."
+    },
+    {
+      "id": "FUND-004",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Medication Administration",
+      "difficulty": "medium",
+      "stem": "Before administering a medication, the nurse finds that the patient's identification band does not match the medication administration record. What is the safest action?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ask the patient to confirm the medication name."
+        },
+        {
+          "id": "B",
+          "text": "Withhold the medication until identity is verified using approved identifiers."
+        },
+        {
+          "id": "C",
+          "text": "Ask another patient in the room to confirm the name."
+        },
+        {
+          "id": "D",
+          "text": "Administer the medication and correct the record afterward."
+        }
+      ],
+      "correctAnswer": "B",
+      "rationale": "The nurse must stop and resolve any identity discrepancy before medication administration. Use the facility-approved patient identifiers and do not rely on room location or another person's confirmation."
+    },
+    {
+      "id": "FUND-005",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Pressure Injury Prevention",
+      "difficulty": "easy",
+      "stem": "A bedbound patient is at high risk for pressure injury. Which intervention is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Massage reddened bony prominences every shift."
+        },
+        {
+          "id": "B",
+          "text": "Reposition according to an individualized schedule and offload pressure."
+        },
+        {
+          "id": "C",
+          "text": "Keep the head of the bed at 90 degrees continuously."
+        },
+        {
+          "id": "D",
+          "text": "Use a ring-shaped cushion under the sacrum."
+        }
+      ],
+      "correctAnswer": "B",
+      "rationale": "Individualized repositioning, pressure redistribution, and offloading reduce sustained tissue pressure. Do not massage nonblanchable redness or use ring devices that concentrate pressure."
+    },
+    {
+      "id": "FUND-006",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Oxygenation",
+      "difficulty": "medium",
+      "stem": "A patient receiving oxygen by nasal cannula becomes increasingly restless and has an oxygen saturation of 84%. What is the nurse's priority?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assess airway and breathing, verify oxygen delivery, and escalate promptly."
+        },
+        {
+          "id": "B",
+          "text": "Remove the oxygen to see whether the reading changes."
+        },
+        {
+          "id": "C",
+          "text": "Offer a meal to reduce restlessness."
+        },
+        {
+          "id": "D",
+          "text": "Wait 30 minutes and repeat the measurement."
+        }
+      ],
+      "correctAnswer": "A",
+      "rationale": "Restlessness and significant desaturation may signal hypoxemia. Immediately assess the patient and oxygen equipment, support oxygenation within the prescribed protocol, and obtain urgent assistance."
+    },
+    {
+      "id": "FUND-007",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Fluid Balance",
+      "difficulty": "medium",
+      "stem": "Which finding is most useful for evaluating a patient's day-to-day fluid balance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daily weight measured under consistent conditions."
+        },
+        {
+          "id": "B",
+          "text": "Skin colour at the end of the shift."
+        },
+        {
+          "id": "C",
+          "text": "Number of visitors during the day."
+        },
+        {
+          "id": "D",
+          "text": "Appetite at one meal."
+        }
+      ],
+      "correctAnswer": "A",
+      "rationale": "Daily weight obtained at the same time and under similar conditions is a sensitive indicator of fluid gain or loss. Intake and output and clinical assessment provide additional information."
+    },
+    {
+      "id": "FUND-008",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Delegation",
+      "difficulty": "hard",
+      "stem": "Which task is most appropriate for the registered nurse to delegate to experienced unlicensed assistive personnel for a stable patient?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perform the initial assessment of new chest pain."
+        },
+        {
+          "id": "B",
+          "text": "Teach a patient how to self-administer insulin."
+        },
+        {
+          "id": "C",
+          "text": "Obtain routine vital signs and report abnormal findings."
+        },
+        {
+          "id": "D",
+          "text": "Evaluate whether pain medication was effective."
+        }
+      ],
+      "correctAnswer": "C",
+      "rationale": "Routine data collection for a stable patient may be delegated when the worker is competent and instructions are clear. Assessment, teaching, and evaluation remain nursing responsibilities."
+    },
+    {
+      "id": "FUND-009",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Specimen Collection",
+      "difficulty": "medium",
+      "stem": "A nurse is collecting a urine specimen for culture from a patient with an indwelling urinary catheter. Which method is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collect urine from the drainage bag."
+        },
+        {
+          "id": "B",
+          "text": "Aspirate urine aseptically from the disinfected sampling port."
+        },
+        {
+          "id": "C",
+          "text": "Disconnect the catheter tubing and pour urine into the cup."
+        },
+        {
+          "id": "D",
+          "text": "Collect the first urine that drains onto the bed pad."
+        }
+      ],
+      "correctAnswer": "B",
+      "rationale": "A catheter urine culture is collected aseptically from the disinfected sampling port using the appropriate sterile technique. Drainage-bag urine is not an appropriate culture specimen."
+    },
+    {
+      "id": "FUND-010",
+      "subjectId": "fundamentals_of_nursing",
+      "topic": "Clinical Documentation",
+      "difficulty": "easy",
+      "stem": "A nurse discovers that an entry was made in the wrong patient's electronic health record. What should the nurse do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delete the entry without notifying anyone."
+        },
+        {
+          "id": "B",
+          "text": "Follow the facility's correction procedure and preserve the audit trail."
+        },
+        {
+          "id": "C",
+          "text": "Copy the entry into the correct chart and leave the original."
+        },
+        {
+          "id": "D",
+          "text": "Ask a colleague to sign in and remove the entry."
+        }
+      ],
+      "correctAnswer": "B",
+      "rationale": "Documentation errors must be corrected according to organizational policy while preserving the audit trail. Never conceal, falsify, or remove records outside the approved process."
+    }
+  ]
+}
