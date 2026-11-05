@@ -1,0 +1,10 @@
+{
+  "name": "NursePrep",
+  "short_name": "NursePrep",
+  "description": "Offline-first NCLEX-RN nursing practice",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061326",
+  "theme_color": "#071a33",
+  "icons": []
+}
