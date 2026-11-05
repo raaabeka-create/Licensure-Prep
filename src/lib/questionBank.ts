@@ -22,7 +22,7 @@ const bundledBanks = [
   leadership,
   ethics,
   comprehensive,
-] as QuestionBankFile[];
+] as unknown as QuestionBankFile[];
 
 function validateBank(bank: QuestionBankFile): void {
   const ids = new Set<string>();
