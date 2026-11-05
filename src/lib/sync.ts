@@ -58,3 +58,18 @@ export async function syncPendingAttempts(): Promise<{ synced: number; skipped: 
 
   return { synced, skipped: false };
 }
+
+export function startAutoSync(): () => void {
+  const onOnline = () => { void syncPendingAttempts(); };
+  window.addEventListener('online', onOnline);
+  const authSubscription = supabase?.auth.onAuthStateChange((_event, session) => {
+    if (session) queueMicrotask(() => { void syncPendingAttempts(); });
+  });
+
+  if (navigator.onLine) void syncPendingAttempts();
+
+  return () => {
+    window.removeEventListener('online', onOnline);
+    authSubscription?.data.subscription.unsubscribe();
+  };
+}
